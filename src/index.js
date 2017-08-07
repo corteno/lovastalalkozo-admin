@@ -6,16 +6,26 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 
 import Login from './components/login';
+import Admin from './components/admin';
 import reducers from './reducers';
+import AuthServices from './utils/AuthServices';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
         <BrowserRouter>
-            <Switch>
-                <Route path='/' component={Login}/>
-            </Switch>
+            {
+                AuthServices.isLoggedIn() ?
+                    <Switch>
+                        <Route path='/' component={Admin}/>
+                    </Switch> 
+                    :
+                    
+                    <Switch>
+                        <Route path='/' component={Login}/>
+                    </Switch>
+            }
         </BrowserRouter>
     </Provider>
     , document.querySelector('.container'));

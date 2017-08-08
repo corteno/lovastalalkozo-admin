@@ -3,7 +3,6 @@
     font-family: RalewayRegular;
     color: #212121;
 
-
 }
 
 body {
@@ -51,50 +50,47 @@ p {
     flex-direction: row;
 }
 
-.box-shadow{
-    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+.box-shadow {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
 }
 
-
-
-.container{
+.container {
     height: 100vh;
     width: 100%;
+}
+
+.login-wrapper {
+    height: 100%;
+    width: 100%;
+    align-items: center;
     justify-content: center;
 }
 
-.login-wrapper{
-    height: 100%;
+.login-form {
+    align-items: center;
+    width: 100%;
     max-width: 420px;
-    width: 100%;
-    align-items: center;
-}
-
-.login-form{
-    align-items: center;
-    width: 100%;
     height: 380px;
     padding: 30px;
-
 
     background: #FAFAFA;
     border-radius: 6px;
 }
 
-.login-title{
+.login-title {
     margin-top: 0;
     margin-bottom: 80px;
 
     color: #388E3C;
 }
 
-.form-input-wrapper{
+.form-input-wrapper {
     position: relative;
     width: 100%;
     margin-bottom: 35px;
 }
 
-.form-input{
+.form-input {
     width: 100%;
 
     padding: 5px 5px;
@@ -109,7 +105,7 @@ p {
     background: none;
 }
 
-.form-label{
+.form-label {
     pointer-events: none;
     position: absolute;
     left: 5px;
@@ -119,7 +115,7 @@ p {
     transition: 0.3s all;
 }
 
-.bar{
+.bar {
     position: absolute;
     bottom: 0;
     width: 0;
@@ -130,18 +126,18 @@ p {
     transition: 0.3s all;
 }
 
-.form-input:focus ~ .form-label, .form-input:valid ~ .form-label{
+.form-input:focus ~ .form-label, .form-input:valid ~ .form-label {
     top: -22px;
     left: 0;
 
     font-size: 18px;
 }
 
-.form-input:focus ~ .bar, .form-input:valid ~ .bar{
+.form-input:focus ~ .bar, .form-input:valid ~ .bar {
     width: 100%;
 }
 
-.form-submit{
+.form-submit {
     padding: 17px 35px;
     margin-top: 15px;
     /*background: #388E3C;*/
@@ -159,9 +155,83 @@ p {
     transition: 0.4s all;
 }
 
-.form-submit:hover{
+.form-submit:hover {
     background: #388E3C;
     color: #FAFAFA;
+}
+
+/*
+    ADMIN
+*/
+
+.admin-wrapper{
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background: #424242;
+    border-right: 1px solid #BDBDBD;
+    padding-right: 10px;
+}
+
+.sidebar-title{
+    height: auto;
+    color: #F5F5F5;
+    padding: 15px 0 15px 10px;
+    margin: 0;
+    border-bottom: 2px solid #616161;
+}
+
+.sidebar-menu-list{
+
+}
+
+.sidebar-menu-item{
+    width: 100%;
+    color: #F5F5F5;
+    padding: 15px 0 15px 15px;
+    cursor: pointer;
+    transition: 0.3s all;
+    border-bottom: 1px solid #616161;
+}
+
+.sidebar-menu-item:hover{
+    padding-left: 25px;
+    font-weight: 800;
+}
+
+.sidebar-made-by{
+    margin-top: auto;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+
+
+    color: #9E9E9E;
+}
+
+.admin-content-wrapper{
+    width: 100%;
+    padding: 20px;
+}
+
+.admin-content-header{
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 10px;
+}
+
+.admin-content-title{
+    margin: 0;
+    font-size: 42px;
+    color: #424242;
+}
+
+.admin-content-date{
+    color: #757575;
+    margin: 0;
+    padding-left: 5px;
 }
 
 
@@ -170,21 +240,6 @@ p {
 /*
     FONTS
 */
-
-@font-face {
-    font-family: OpenSansRegular;
-    src: url('../fonts/OpenSans-Regular.ttf');
-}
-
-@font-face {
-    font-family: OpenSansBold;
-    src: url('../fonts/OpenSans-Bold.ttf');
-}
-
-@font-face {
-    font-family: OpenSansLight;
-    src: url('../fonts/OpenSans-Light.ttf');
-}
 
 @font-face {
     font-family: RalewayLight;

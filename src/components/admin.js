@@ -2,14 +2,15 @@ import React, {Component} from 'react';
 import AuthServices from '../utils/AuthServices';
 import {connect} from 'react-redux';
 
-import {getCandidates} from "../actions/index"
+import {getCandidates} from "../actions"
+import List from './list';
 
 class Admin extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            content: 'start'
+            content: 'candidates'
         };
     }
 
@@ -32,6 +33,28 @@ class Admin extends Component {
         }
     };
 
+    renderList = () => {
+        if(this.props.candidates.length > 0){
+            switch(this.state.content){
+                case 'users':
+
+                    break;
+
+                case 'candidates':
+                    return (
+                        <List
+                            list={this.props.candidates}
+                        />
+                    );
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+    };
+
     render() {
         let title;
         switch(this.state.content){
@@ -46,7 +69,6 @@ class Admin extends Component {
                 break;
         }
 
-        console.log(this.props.candidates);
         return (
             <div className="admin-wrapper">
                 <nav className="sidebar col box-shadow">
@@ -71,7 +93,9 @@ class Admin extends Component {
                         <h2 className="admin-content-title">{title}</h2>
                         <h3 className="admin-content-date">{this.getCurrentDate()}</h3>
                     </header>
-
+                    <div className="admin-content-list-wrapper">
+                        {this.renderList()}
+                    </div>
                 </section>
             </div>
         );

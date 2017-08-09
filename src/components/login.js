@@ -36,8 +36,8 @@ class Login extends Component {
     };
 
     resetForm = () => {
-      this.setState({username: ''});
-      this.setState({password: ''});
+        this.setState({username: ''});
+        this.setState({password: ''});
     };
 
 

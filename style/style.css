@@ -164,7 +164,7 @@ p {
     ADMIN
 */
 
-.admin-wrapper{
+.admin-wrapper {
     width: 100%;
 }
 
@@ -176,7 +176,7 @@ p {
     padding-right: 10px;
 }
 
-.sidebar-title{
+.sidebar-title {
     height: auto;
     color: #F5F5F5;
     padding: 15px 0 15px 10px;
@@ -184,11 +184,11 @@ p {
     border-bottom: 2px solid #616161;
 }
 
-.sidebar-menu-list{
+.sidebar-menu-list {
 
 }
 
-.sidebar-menu-item{
+.sidebar-menu-item {
     width: 100%;
     color: #F5F5F5;
     padding: 15px 0 15px 15px;
@@ -197,45 +197,104 @@ p {
     border-bottom: 1px solid #616161;
 }
 
-.sidebar-menu-item:hover{
+.sidebar-menu-item:hover {
     padding-left: 25px;
     font-weight: 800;
 }
 
-.sidebar-made-by{
+.sidebar-made-by {
     margin-top: auto;
     padding: 10px 0;
     text-align: center;
     font-size: 14px;
 
-
     color: #9E9E9E;
 }
 
-.admin-content-wrapper{
+.admin-content-wrapper {
     width: 100%;
     padding: 20px;
 }
 
-.admin-content-header{
+.admin-content-header {
     border-bottom: 1px solid #dbdbdb;
     padding-bottom: 10px;
 }
 
-.admin-content-title{
+.admin-content-title {
     margin: 0;
     font-size: 42px;
     color: #424242;
 }
 
-.admin-content-date{
+.admin-content-date {
     color: #757575;
     margin: 0;
     padding-left: 5px;
 }
 
+.admin-content-list, .admin-content-list-item {
+    width: 100%;
+}
 
+.name, .contact {
+    width: 20%;
+}
 
+.horsename {
+    width: 10%;
+}
+
+.company {
+    width: 8%;
+    text-align: center;
+}
+
+.delete {
+    width: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
+
+    font-family: RalewayBold;
+
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.admin-content-list-item .delete{
+    color: #E53935;
+}
+
+.admin-content-list-item .delete:hover{
+    background: #E53935;
+    color: #EEEEEE;
+}
+
+.comments {
+    width: calc(42% - 50px);
+    padding-left: 30px;
+}
+
+.admin-content-list-item-header {
+    height: 50px;
+    align-items: center;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 10px;
+}
+
+.admin-content-list-item-header p {
+    font-family: RalewayMedium;
+    font-size: 18px;
+}
+
+.admin-content-list-item {
+    height: 50px;
+    padding: 0 10px;
+    align-items: center;
+    border-bottom: 1px solid #dbdbdb;
+}
 
 /*
     FONTS

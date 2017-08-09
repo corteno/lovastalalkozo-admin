@@ -12,7 +12,6 @@ const login = (user) => {
                 };
 
                 localStorage.setItem('user', createToken(userDetails));
-                setUser(getUserDetails());
                 refreshPage();
                 resolve("Everything worked!");
             })

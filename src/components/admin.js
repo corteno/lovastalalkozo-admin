@@ -53,6 +53,11 @@ class Admin extends Component {
             }
         }
 
+        return (
+            <p className="no-candidates">Nincs még jelentkező!
+            </p>
+        );
+
     };
 
     render() {
@@ -74,12 +79,12 @@ class Admin extends Component {
                 <nav className="sidebar col box-shadow">
                     <h1 className="sidebar-title">Admin felület</h1>
                     <ul className="sidebar-menu-list col">
-                        <li
+                        {/*<li
                             className="sidebar-menu-item"
                             onClick={event => this.onMenuClick(event)}
                             
                         >Felhasználók
-                        </li>
+                        </li>*/}
                         <li
                             className="sidebar-menu-item"
                             onClick={event => this.onMenuClick(event)}

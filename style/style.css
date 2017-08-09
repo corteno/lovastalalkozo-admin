@@ -206,7 +206,7 @@ p {
     margin-top: auto;
     padding: 10px 0;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
 
     color: #9E9E9E;
 }
@@ -258,6 +258,7 @@ p {
     align-items: center;
 
     font-family: RalewayBold;
+    font-size: 22px;
 
     cursor: pointer;
     transition: 0.3s all;
@@ -295,6 +296,15 @@ p {
     align-items: center;
     border-bottom: 1px solid #dbdbdb;
 }
+
+.no-candidates{
+    line-height: 40px;
+    font-family: RalewayMedium;
+    padding-left: 5px;
+    color: #9E9E9E;
+}
+
+
 
 /*
     FONTS

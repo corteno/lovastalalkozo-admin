@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import {deleteCandidate} from "../actions"
 
 const ListItem = (props) => {
 
@@ -9,10 +12,10 @@ const ListItem = (props) => {
             <p className="horsename">{props.item.horsename}</p>
             <p className="company">{props.item.company}</p>
             <p className="comments">{props.item.comments}</p>
-            <p className="delete">X</p>
+            <p className="delete" onClick={() => {props.deleteCandidate(props.item._id)}}>✖</p>
         </li>
     );
 
 };
 
-export default ListItem;
+export default connect(null, {deleteCandidate})(ListItem);

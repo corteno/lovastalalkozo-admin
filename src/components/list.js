@@ -27,7 +27,6 @@ class List extends Component {
                     <p className="contact">Elérhetőség</p>
                     <p className="horsename">Ló neve</p>
                     <p className="company">Kísérők száma</p>
-                    <p className="comments">Eddigi eredmények, egyéb információk</p>
                     <p className="delete">Törlés</p>
                 </li>
                 {this.renderList()}

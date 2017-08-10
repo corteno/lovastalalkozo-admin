@@ -246,7 +246,7 @@ p {
 }
 
 .company {
-    width: 8%;
+    width: 10%;
     text-align: center;
 }
 
@@ -259,6 +259,7 @@ p {
 
     font-family: RalewayBold;
     font-size: 22px;
+    margin-left: auto;
 
     cursor: pointer;
     transition: 0.3s all;

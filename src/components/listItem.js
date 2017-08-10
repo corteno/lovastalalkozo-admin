@@ -11,7 +11,6 @@ const ListItem = (props) => {
             <p className="contact">{props.item.contact}</p>
             <p className="horsename">{props.item.horsename}</p>
             <p className="company">{props.item.company}</p>
-            <p className="comments">{props.item.comments}</p>
             <p className="delete" onClick={() => {props.deleteCandidate(props.item._id)}}>✖</p>
         </li>
     );

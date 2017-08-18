@@ -66,7 +66,7 @@ class Admin extends Component {
         let csvContent = '' /*['Név', 'Elérhetőség', 'Ló neve', 'Kísérők száma']*/;
 
         data.forEach((candidate, index) => {
-            let infoArray = [candidate.name, candidate.contact, candidate.horsename, candidate.company];
+            let infoArray = [candidate.name, candidate.contact, candidate.location, candidate.horsename, candidate.horsetype, candidate.company];
 
             let dataString = infoArray.join(",");
             csvContent += index < data.length ? dataString+ "\n" : dataString;

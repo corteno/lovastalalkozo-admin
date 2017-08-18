@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
     entry: [
         './src/index.js'
@@ -28,5 +30,10 @@ module.exports = {
         tls: 'empty',
         dns: 'empty',
         isemail: 'empty'
-    }
+    },
+    plugins:[
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        })
+    ]
 };

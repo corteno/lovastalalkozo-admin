@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import AuthServices from '../utils/AuthServices';
 import {connect} from 'react-redux';
+import {CSVLink, CSVDownload} from 'react-csv';
+
 
 import {getCandidates} from "../actions"
 import List from './list';
@@ -54,9 +56,23 @@ class Admin extends Component {
         }
 
         return (
-            <p className="no-candidates">Nincs még jelentkező!
-            </p>
+            <p className="no-candidates">Nincs még jelentkező!</p>
         );
+
+    };
+
+    saveCandidatesToExcel = () => {
+        let data = this.props.candidates;
+        let csvContent = '' /*['Név', 'Elérhetőség', 'Ló neve', 'Kísérők száma']*/;
+
+        data.forEach((candidate, index) => {
+            let infoArray = [candidate.name, candidate.contact, candidate.horsename, candidate.company];
+
+            let dataString = infoArray.join(",");
+            csvContent += index < data.length ? dataString+ "\n" : dataString;
+        });
+
+        return csvContent;
 
     };
 
@@ -94,9 +110,17 @@ class Admin extends Component {
                     <p className="sidebar-made-by">Készítette Borsodi Dávid © 2017</p>
                 </nav>
                 <section className="admin-content-wrapper col">
-                    <header className="admin-content-header col">
-                        <h2 className="admin-content-title">{title}</h2>
-                        <h3 className="admin-content-date">{this.getCurrentDate()}</h3>
+                    <header className="admin-content-header">
+                        <div className="header-left col">
+                            <h2 className="admin-content-title">{title}</h2>
+                            <h3 className="admin-content-date">{this.getCurrentDate()}</h3>
+                        </div>
+                        <CSVLink
+                            filename={'lovastalakozo-jelentkezok.csv'}
+                            className="download-button"
+                            target="_blank"
+                            data={this.props.candidates.length > 0 ? this.saveCandidatesToExcel() : ''}
+                        >Letöltés</CSVLink>
                     </header>
                     <div className="admin-content-list-wrapper">
                         {this.renderList()}

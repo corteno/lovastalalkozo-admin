@@ -22,7 +22,7 @@ const login = (user) => {
 };
 
 const logout = () => {
-    destroyToken('user');
+    destroyToken('user');  
     browserHistory.push('/');
     refreshPage();
 };

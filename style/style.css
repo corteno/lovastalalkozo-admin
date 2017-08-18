@@ -305,6 +305,29 @@ p {
     color: #9E9E9E;
 }
 
+.download-button{
+    margin-left: auto;
+    height: 45px;
+    padding: 0 20px;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #237A57;
+    color: #237A57;
+    font-family: RalewayMedium;
+    font-weight: 600;
+
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+.download-button:hover{
+    color: #EEE;
+    background: #237A57;
+}
+
+
 
 
 /*

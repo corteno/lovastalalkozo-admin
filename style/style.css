@@ -241,7 +241,7 @@ p {
     width: 20%;
 }
 
-.horsename {
+.horsename, .horsetype, .location {
     width: 10%;
 }
 

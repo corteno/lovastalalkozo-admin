@@ -76,6 +76,7 @@ class Admin extends Component {
 
     };
 
+
     render() {
         let title;
         switch(this.state.content){

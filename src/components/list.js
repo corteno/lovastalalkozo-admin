@@ -25,7 +25,9 @@ class List extends Component {
                 <li className="admin-content-list-item-header">
                     <p className="name">Versenyző neve</p>
                     <p className="contact">Elérhetőség</p>
+                    <p className="location">Lakhely</p>
                     <p className="horsename">Ló neve</p>
+                    <p className="horsetype">Ló fajtája</p>
                     <p className="company">Kísérők száma</p>
                     <p className="delete">Törlés</p>
                 </li>
